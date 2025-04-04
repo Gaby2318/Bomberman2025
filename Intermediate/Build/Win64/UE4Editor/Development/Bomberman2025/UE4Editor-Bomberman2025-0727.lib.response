@@ -1,0 +1,31 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Bomberman2025-0727.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\Bomberman2025Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bloque.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueAcero.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueBurbuja.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueConcreto.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueLadrillo.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueMadera.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025Character.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025GameMode.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Capsula.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bloque.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueAcero.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueBurbuja.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueConcreto.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueLadrillo.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\BloqueMadera.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025.init.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025Character.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Bomberman2025GameMode.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Capsula.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\Default.rc2.res"
+/OUT:"C:\Users\Gaby\Documents\Unreal Projects\Bomberman2025\Intermediate\Build\Win64\UE4Editor\Development\Bomberman2025\UE4Editor-Bomberman2025-0727.lib"

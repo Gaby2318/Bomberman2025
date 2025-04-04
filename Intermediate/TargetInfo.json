@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Bomberman2025",
+			"Path": "C:\\Users\\Gaby\\Documents\\Unreal Projects\\Bomberman2025\\Source\\Bomberman2025.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Bomberman2025Editor",
+			"Path": "C:\\Users\\Gaby\\Documents\\Unreal Projects\\Bomberman2025\\Source\\Bomberman2025Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
