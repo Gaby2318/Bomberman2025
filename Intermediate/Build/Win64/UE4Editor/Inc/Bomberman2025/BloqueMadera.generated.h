@@ -36,7 +36,7 @@ public: \
 
 #define Bomberman2025_Source_Bomberman2025_BloqueMadera_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABloqueMadera(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ABloqueMadera(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABloqueMadera) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ABloqueMadera); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABloqueMadera); \
@@ -48,8 +48,6 @@ public:
 
 
 #define Bomberman2025_Source_Bomberman2025_BloqueMadera_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABloqueMadera() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABloqueMadera(ABloqueMadera&&); \

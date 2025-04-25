@@ -14,4 +14,5 @@ class BOMBERMAN2025_API AEnemigoSubterraneo : public AEnemigo1
 {
 	GENERATED_BODY()
 	
+	AEnemigoSubterraneo();
 };

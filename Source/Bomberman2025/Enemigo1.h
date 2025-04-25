@@ -15,7 +15,7 @@ public:
 	// Sets default values for this character's properties
 	AEnemigo1();
 
-	virtual void PerformAttack();
+	//virtual void PerformAttack();
 
 protected:
 	// Called when the game starts or when spawned
@@ -33,9 +33,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemigo")
 	int Danio;
+	
 
-	// Funciones comunes para los enemigos
-	virtual void Atacar();
-	virtual void Morir();
 
 };

@@ -14,6 +14,11 @@
 #include "BloqueOro.h"
 #include "BloqueHielo.h"
 #include "BloqueCuarzo.h"
+#include "Bomba.h"
+#include "Moneda.h"
+#include "Engine/World.h"
+#include <Kismet/KismetMathLibrary.h>
+
 
 
 ABomberman2025GameMode::ABomberman2025GameMode()
@@ -29,7 +34,15 @@ void ABomberman2025GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
+	
+
+
 	GEngine->AddOnScreenDebugMessage(-1, -1, FColor::Red, TEXT("Bloque Spawning"));
+
+
+	/*SpawnBloque(FVector(0.0f, 0.0f, 0.0f), 1);
+	SpawnBloque(FVector(100.0f, 100.0f, 0.0f), 2);
+	SpawnBloque(FVector(200.0f, 200.0f,  0.0f), 3);*/
 
 	// Recorremos la matriz para generar los bloques
 	for (int32 fila = 0; fila < aMapaBloques.Num(); ++fila)
@@ -43,16 +56,22 @@ void ABomberman2025GameMode::BeginPlay()
 				FVector posicionBloque = FVector(
 					XInicial + columna * AnchoBloque,
 					YInicial + fila * LargoBloque,
-					20.0f); // Z queda en 0 (altura del bloque)
+					10.0f); // Z queda en 0 (altura del bloque)
 
 				// Llamamos a la función para generar un bloque
 				SpawnBloque(posicionBloque, valor);
 			}
 		}
 	}
+	
+	GetWorld()->GetTimerManager().SetTimer(tHDestruirBloques, this, &ABomberman2025GameMode::DestruirBloque, 2.0f, false);
 
-	GetWorld()->GetTimerManager().SetTimer(tHDestruirBloques, this, &ABomberman2025GameMode::DestruirBloque, 2.0f, true);
+
+	//SpawnMultiplesBombas(1);
+
 }
+
+
 
 // Función para generar un bloque
 void ABomberman2025GameMode::SpawnBloque(FVector posicionBloque, int32 tipoBloque)
@@ -63,7 +82,7 @@ void ABomberman2025GameMode::SpawnBloque(FVector posicionBloque, int32 tipoBloqu
 	// Elegir tipo de bloque basado en el valor
 	if (tipoBloque == 10)
 	{
-		BloqueGenerado = GetWorld()->SpawnActor<ABloqueCuarzo>(ABloqueCuarzo::StaticClass(), posicionBloque, FRotator(0.0f, 0.0f, 0.0f));
+		BloqueGenerado = GetWorld()->SpawnActor<ABloqueConcreto>(ABloqueConcreto::StaticClass(), posicionBloque, FRotator(0.0f, 0.0f, 0.0f));
 	}
 	else if (tipoBloque == 9)
 	{
@@ -91,7 +110,7 @@ void ABomberman2025GameMode::SpawnBloque(FVector posicionBloque, int32 tipoBloqu
 	}
 	else if (tipoBloque == 3)
 	{
-		BloqueGenerado = GetWorld()->SpawnActor<ABloqueConcreto>(ABloqueConcreto::StaticClass(), posicionBloque, FRotator(0.0f, 0.0f, 0.0f));
+		BloqueGenerado = GetWorld()->SpawnActor<ABloqueCuarzo>(ABloqueCuarzo::StaticClass(), posicionBloque, FRotator(0.0f, 0.0f, 0.0f));
 	}
 	else if (tipoBloque == 2)
 	{
@@ -109,7 +128,7 @@ void ABomberman2025GameMode::SpawnBloque(FVector posicionBloque, int32 tipoBloqu
 	{
 		//BloqueGenerado->SetActorLocation(posicionBloque);
 		//BloqueGenerado->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
-		BloqueGenerado->SetActorScale3D(FVector(5.0f, 5.0f, 5.0f));
+		BloqueGenerado->SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 	}
 
 	// Agregar el bloque al TArray si fue generado
@@ -137,6 +156,178 @@ void ABomberman2025GameMode::DestruirBloque()
 		}
 	}
 }
+
+
+// Update the SpawnMoneda function to accept a parameter for position  
+void ABomberman2025GameMode::SpawnMoneda(FVector posicionMoneda)  
+{  
+   AMoneda* MonedaGenerada = GetWorld()->SpawnActor<AMoneda>(AMoneda::StaticClass(), FVector(300.0f, 300.0f, 0.0f), FRotator(0.0f, 0.0f, 0.0f));
+   if (MonedaGenerada)  
+   {  
+       MonedaGenerada->SetActorLocation(posicionMoneda);  
+       //MonedaGenerada->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));  
+       MonedaGenerada->SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));  
+   }  
+}  
+
+/*
+void ABomberman2025GameMode::SpawnMultiplesBombas(int32 Cantidad)
+{
+	for (int32 i = 0; i < Cantidad; ++i)
+	{
+		FVector PosAleatoria = UKismetMathLibrary::RandomPointInBoundingBox(
+			FVector(0, 0, 100), FVector(100, 100, 0)); // ajusta según tu mapa
+
+		ABomba* NuevaBomba = GetWorld()->SpawnActor<ABomba>(ClaseBomba, PosAleatoria, FRotator::ZeroRotator);
+		if (NuevaBomba)
+		{
+			NuevaBomba->Inicializar(5.0f, Cantidad); // explota en 5 segundos
+		}
+	}
+}
+
+*/
+/*
+
+void ABomberman2025GameMode::SpawnBomba(FVector posicionBomba)
+{
+	ABomba* BombaGenerada = GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass(), FVector(200.0f, 200.0f, 0.0f), FRotator(0.0f, 0.0f, 0.0f));
+	if (BombaGenerada)
+	{
+		BombaGenerada->SetActorLocation(posicionBomba);
+		BombaGenerada->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
+		BombaGenerada->SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
+	}
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+void ABomberman2025GameMode::SpawnMoneda(FVector posicionMoneda)
+{
+	AMoneda* MonedaGenerada = GetWorld()->SpawnActor<AMoneda>(AMoneda::StaticClass(), posicionMoneda, FRotator(1.0f, 1.0f, 1.0f));
+	if (MonedaGenerada)
+	{
+		MonedaGenerada->SetActorLocation(posicionMoneda);
+	    MonedaGenerada->SetActorRotation(FRotator(1.0f, 1.0f, 1.0f));
+		MonedaGenerada->SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
+	}
+}
+void ABomberman2025GameMode::SpawnMoneda()
+{
+	// Generar una posición aleatoria para la moneda
+	FVector PosicionMoneda = FVector(FMath::RandRange(-1000.f, 1000.f), FMath::RandRange(-1000.f, 1000.f), 10.0f);
+	// Llamar a la función para generar la moneda
+	SpawnMoneda(PosicionMoneda);
+}
+
+void ABomberman2025GameMode::SpawnBomba(FVector posicionBomba)
+{
+	ABomba* BombaGenerada = GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass(), posicionBomba, FRotator(0.0f, 0.0f, 0.0f));
+	if (BombaGenerada)
+	{
+		BombaGenerada->SetActorLocation(posicionBomba);
+		BombaGenerada->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
+		BombaGenerada->SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
+	}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+void ATuGameMode::BeginPlay()
+{
+	Super::BeginPlay();
+	GenerarLaberinto();
+}
+
+void ATuGameMode::GenerarLaberinto()
+{
+	UWorld* Mundo = GetWorld();
+	if (!Mundo || !BloqueClase) return;
+
+	for (int32 X = 0; X < Tamaño; X++)
+	{
+		for (int32 Y = 0; Y < Tamaño; Y++)
+		{
+			// Espacio entre bloques (tipo checkerboard o alternancia)
+			if ((X + Y) % 2 == 0) continue;
+
+			FVector Posicion(X * Espacio, Y * Espacio, 0.f);
+
+			// Borde: colocar concreto
+			bool EsBorde = (X == 0 || Y == 0 || X == Tamaño - 1 || Y == Tamaño - 1);
+
+			FActorSpawnParameters Params;
+			ABloqueBase* Bloque = Mundo->SpawnActor<ABloqueBase>(BloqueClase, Posicion, FRotator::ZeroRotator, Params);
+
+			if (Bloque)
+			{
+				if (EsBorde)
+				{
+					// Suponiendo que el índice 2 = Concreto
+					Bloque->SetMaterial(MaterialesBloques[2]);
+				}
+				else
+				{
+					// Random entre los 10 materiales
+					int32 IndexMaterial = FMath::RandRange(0, 9);
+					Bloque->SetMaterial(MaterialesBloques[IndexMaterial]);
+				}
+			}
+		}
+	}
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 void AMyActor::TestMap()

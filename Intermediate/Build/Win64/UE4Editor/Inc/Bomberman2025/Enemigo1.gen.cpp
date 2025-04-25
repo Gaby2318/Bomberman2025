@@ -31,6 +31,15 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo1() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Salud_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Salud;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Danio_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Danio;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +54,24 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo1() {}
 		{ "ModuleRelativePath", "Enemigo1.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemigo1_Statics::NewProp_Salud_MetaData[] = {
+		{ "Category", "Enemigo" },
+		{ "ModuleRelativePath", "Enemigo1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AEnemigo1_Statics::NewProp_Salud = { "Salud", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemigo1, Salud), METADATA_PARAMS(Z_Construct_UClass_AEnemigo1_Statics::NewProp_Salud_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo1_Statics::NewProp_Salud_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemigo1_Statics::NewProp_Danio_MetaData[] = {
+		{ "Category", "Enemigo" },
+		{ "ModuleRelativePath", "Enemigo1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AEnemigo1_Statics::NewProp_Danio = { "Danio", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemigo1, Danio), METADATA_PARAMS(Z_Construct_UClass_AEnemigo1_Statics::NewProp_Danio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo1_Statics::NewProp_Danio_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemigo1_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemigo1_Statics::NewProp_Salud,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemigo1_Statics::NewProp_Danio,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemigo1_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemigo1>::IsAbstract,
 	};
@@ -54,11 +81,11 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo1() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AEnemigo1_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo1_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AEnemigo1_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo1_Statics::Class_MetaDataParams))
@@ -72,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo1() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigo1, 3042418103);
+	IMPLEMENT_CLASS(AEnemigo1, 1285303494);
 	template<> BOMBERMAN2025_API UClass* StaticClass<AEnemigo1>()
 	{
 		return AEnemigo1::StaticClass();

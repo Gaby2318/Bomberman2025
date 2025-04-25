@@ -8,7 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
-
+#include "Bomba.h" // Asegúrate de incluir el archivo de encabezado de la clase Abomba para resolver el error de tipo incompleto
 
 /*#include "Bomberman2025Character.h"
 #include "Engine/LocalPlayer.h"
@@ -88,6 +88,33 @@ void ABomberman2025Character::SetupPlayerInputComponent(class UInputComponent* P
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ABomberman2025Character::OnResetVR);
+}
+
+void ABomberman2025Character::SpawnBomba()
+{
+	UE_LOG(LogTemp, Warning, TEXT("SpawnBomba() ha sido llamado!"));
+	if (BombasActivas < MaxBombas)
+	{
+		FVector posicionBomba = GetActorLocation();
+		posicionBomba.Z += 10.0f;
+		// esto crea una nueva bomba en el juego
+        ABomba* BombaNueva = GetWorld()->SpawnActor<ABomba>(ClaseBomba, posicionBomba, FRotator::ZeroRotator);
+		if (BombaNueva)
+		{
+			//ise incrementa , indicando que ya hay una bomba adicional en el juego 
+			BombasActivas++;
+			BombaNueva->SetOwner(this);
+			UE_LOG(LogTemp, Warning, TEXT("¡Bomba creada correctamente!"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("No se pudo crear la bomba!"));
+		}
+	}
+}
+void ABomberman2025Character::BombaExplotada()
+{
+	BombasActivas--; // Reducir el número de bombas activas
 }
 
 

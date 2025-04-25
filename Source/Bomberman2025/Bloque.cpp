@@ -13,7 +13,7 @@ ABloque::ABloque()
 	
 
 	MallaBloque = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MallaBloque"));
-	//RootComponent = MeshComp;
+	RootComponent = MallaBloque;
 	MallaBloque->SetupAttachment(RootComponent);
 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ObjetoMallaBloque(TEXT("/Script/Engine.StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
@@ -22,14 +22,14 @@ ABloque::ABloque()
 	{
 		MallaBloque->SetStaticMesh(ObjetoMallaBloque.Object);
 
-		MallaBloque->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+		//MallaBloque->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
 	}
-
+/*
 	FloatSpeed = 5.0f;
 	RotationSpeed = 3.0f;
 
 	bPuedeMoverse = FMath::RandBool();
-
+	*/
 
 }
 

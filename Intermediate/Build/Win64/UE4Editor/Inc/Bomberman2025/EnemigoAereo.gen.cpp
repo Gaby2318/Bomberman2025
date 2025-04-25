@@ -40,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoAereo() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemigoAereo_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "EnemigoAereo.h" },
 		{ "ModuleRelativePath", "EnemigoAereo.h" },
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoAereo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoAereo, 2551485811);
+	IMPLEMENT_CLASS(AEnemigoAereo, 3041040724);
 	template<> BOMBERMAN2025_API UClass* StaticClass<AEnemigoAereo>()
 	{
 		return AEnemigoAereo::StaticClass();

@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoAcuatico() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoAcuatico, 1519108734);
+	IMPLEMENT_CLASS(AEnemigoAcuatico, 574584848);
 	template<> BOMBERMAN2025_API UClass* StaticClass<AEnemigoAcuatico>()
 	{
 		return AEnemigoAcuatico::StaticClass();

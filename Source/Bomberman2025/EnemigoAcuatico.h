@@ -13,5 +13,6 @@ UCLASS()
 class BOMBERMAN2025_API AEnemigoAcuatico : public AEnemigo1
 {
 	GENERATED_BODY()
-	
+
+	AEnemigoAcuatico();
 };

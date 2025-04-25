@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoTerrestre() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoTerrestre, 108124801);
+	IMPLEMENT_CLASS(AEnemigoTerrestre, 2268803829);
 	template<> BOMBERMAN2025_API UClass* StaticClass<AEnemigoTerrestre>()
 	{
 		return AEnemigoTerrestre::StaticClass();

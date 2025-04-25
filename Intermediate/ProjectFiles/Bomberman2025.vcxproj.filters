@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Bomberman2025.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{45CC418E-19C2-4491-9A02-5C9E00CA62E9}</UniqueIdentifier>
+      <UniqueIdentifier>{D0935F55-88B6-4667-87EC-6FF4D8DFC6F4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Bomberman2025.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\Bomberman2025Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{3B7877A0-E7F5-43D1-8611-5BCF33E43BB5}</UniqueIdentifier>
+      <UniqueIdentifier>{EF177CE9-A7A6-4FCC-9233-E349D50CE550}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Bomberman2025">
-      <UniqueIdentifier>{90E5C4F8-C17A-4B30-AB4A-82305321201E}</UniqueIdentifier>
+      <UniqueIdentifier>{AF6F8C64-AF91-4CB5-BB36-8014FC90D97F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Bomberman2025\Bloque.cpp">
       <Filter>Source\Bomberman2025</Filter>
@@ -96,6 +98,12 @@
       <Filter>Source\Bomberman2025</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Bomberman2025\BloqueVidrio.h">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Bomberman2025\Bomba.cpp">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Bomberman2025\Bomba.h">
       <Filter>Source\Bomberman2025</Filter>
     </ClInclude>
     <None Include="..\..\Source\Bomberman2025\Bomberman2025.Build.cs">
@@ -173,6 +181,17 @@
     <ClInclude Include="..\..\Source\Bomberman2025\EnemigoTerrestre.h">
       <Filter>Source\Bomberman2025</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
+    <ClCompile Include="..\..\Source\Bomberman2025\Moneda.cpp">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Bomberman2025\Moneda.h">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Bomberman2025\Monedas.cpp">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Bomberman2025\Monedas.h">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

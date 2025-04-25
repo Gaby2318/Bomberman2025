@@ -7,11 +7,15 @@
 #include "EnemigoAereo.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class BOMBERMAN2025_API AEnemigoAereo : public AEnemigo1
 {
 	GENERATED_BODY()
-	
+public:
+    AEnemigoAereo(); 
+
+
+
 };

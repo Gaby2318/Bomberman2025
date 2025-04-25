@@ -14,4 +14,5 @@ class BOMBERMAN2025_API AEnemigoAnimal : public AEnemigo
 {
 	GENERATED_BODY()
 	
+	
 };

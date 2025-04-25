@@ -36,7 +36,7 @@ public: \
 
 #define Bomberman2025_Source_Bomberman2025_BloqueTierra_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABloqueTierra(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ABloqueTierra(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABloqueTierra) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ABloqueTierra); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABloqueTierra); \
@@ -48,8 +48,6 @@ public:
 
 
 #define Bomberman2025_Source_Bomberman2025_BloqueTierra_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABloqueTierra() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABloqueTierra(ABloqueTierra&&); \
