@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Bomberman2025.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D0935F55-88B6-4667-87EC-6FF4D8DFC6F4}</UniqueIdentifier>
+      <UniqueIdentifier>{B67BC960-872D-45C9-B4FA-09B28A0E89BE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Bomberman2025.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{EF177CE9-A7A6-4FCC-9233-E349D50CE550}</UniqueIdentifier>
+      <UniqueIdentifier>{4B971B0A-513C-4203-BB16-CB219085B0D2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Bomberman2025">
-      <UniqueIdentifier>{AF6F8C64-AF91-4CB5-BB36-8014FC90D97F}</UniqueIdentifier>
+      <UniqueIdentifier>{931F6C92-790A-4870-B84F-22B2DC83A101}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Bomberman2025\Bloque.cpp">
       <Filter>Source\Bomberman2025</Filter>
@@ -179,6 +179,12 @@
       <Filter>Source\Bomberman2025</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Bomberman2025\EnemigoTerrestre.h">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Bomberman2025\FabricaBloques.cpp">
+      <Filter>Source\Bomberman2025</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Bomberman2025\FabricaBloques.h">
       <Filter>Source\Bomberman2025</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Bomberman2025\Moneda.cpp">

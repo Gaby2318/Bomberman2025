@@ -45,6 +45,8 @@ void ABloque::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
+
 	/*if (bPuedeMoverse)
 	{
 		FVector NewLocation = GetActorLocation();

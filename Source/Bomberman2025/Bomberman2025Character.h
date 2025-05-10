@@ -42,11 +42,11 @@ public:
   /** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */  
   UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)  
   float BaseLookUpRate;  
-public:  
+public:
   // Clase de la bomba  
   UPROPERTY(EditAnywhere, Category = "Bomba") 
 
-  TSubclassOf<class ABomba> ClaseBomba; // Ensure ABomba is correctly declared in the included "Bomba.h" file  
+ TSubclassOf<class ABomba> ClaseBomba; // Ensure ABomba is correctly declared in the included "Bomba.h" file  
  // Métodos para controlar bombas  
   void SpawnBomba();  
   void BombaExplotada();  
